@@ -35,11 +35,11 @@ class SortingReporter extends Reporter {
   }
 
   private[this] var suites = Map.empty[String, SuiteInfo]
-  
-  val RED = "\033[31m"
-  val GREEN = "\033[32m"
-  val BOLD = "\033[1m"
-  val NORMAL = "\033[0m"
+
+  val RED    = "\u001b[31m"
+  val GREEN  = "\u001b[32m"
+  val BOLD   = "\u001b[1m"
+  val NORMAL = "\u001b[0m"
 
   def apply(event: Event): Unit = event match {
     case rs: RunStarting =>
